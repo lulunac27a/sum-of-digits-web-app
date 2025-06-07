@@ -1,7 +1,7 @@
 const numberInput = document.getElementById('numberInput');
 const result = document.getElementById('result');
 function calculateSumOfDigits() {
-    const number = parseInt(numberInput.value);
+    const number = parseInt(numberInput.value, 10);
     if (isNaN(number)) {
         result.textContent = 'Please enter a valid number.';
         return;
