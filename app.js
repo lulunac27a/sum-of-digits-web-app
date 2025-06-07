@@ -13,7 +13,7 @@ function calculateSumOfDigits() {
 }
 function calculateSum(number) {
     const numberString = number.toString().split('e')[0];
-    const integerString = parseInt(number).toString();
+    const integerString = parseInt(number, 10).toString();
     let sum = 0;
     if (mode === 'sumOfDigits') {
         for (let i = 0; i < numberString.length; i++) {
