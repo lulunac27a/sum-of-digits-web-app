@@ -10,10 +10,11 @@ function calculateSumOfDigits() {
     result.textContent = `Sum of digits: ${sum}`;
 }
 function calculateSum(number) {
+    const numberString = number.toString();
     let sum = 0;
-    while (number > 0) {
-        sum += number % 10;
-        number = Math.floor(number / 10);
+    for (let i = 0; i < numberString.length; i++) {
+        const digit = parseInt(numberString[i]);
+        sum += digit;
     }
     return sum;
 }
