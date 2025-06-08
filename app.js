@@ -11,20 +11,30 @@ function calculateSumOfDigits() {
     const sum = calculateSum(number);
     result.textContent = `Sum of digits: ${sum}`;
 }
-function calculateSum(number) {
+function calculateSumOfDigits(number) {
     const numberString = number.toString().split('e')[0];
-    const integerString = parseInt(number, 10).toString();
     let sum = 0;
-    if (mode === 'sumOfDigits') {
-        for (let i = 0; i < numberString.length; i++) {
-            const digit = parseInt(numberString[i], 10);
-            sum += digit;
-        }
-    } else if (mode === 'sumOfIntegerDigits') {
-        for (let i = 0; i < integerString.length; i++) {
-            const digit = parseInt(integerString[i], 10);
-            sum += digit;
-        }
+    for (let i = 0; i < numberString.length; i++) {
+        const digit = parseInt(numberString[i], 10);
+        sum += digit;
     }
     return sum;
+}
+
+function calculateSumOfIntegerDigits(number) {
+    const integerString = parseInt(number, 10).toString();
+    let sum = 0;
+    for (let i = 0; i < integerString.length; i++) {
+        const digit = parseInt(integerString[i], 10);
+        sum += digit;
+    }
+    return sum;
+}
+
+function calculateSum(number) {
+    if (mode === 'sumOfDigits') {
+        return calculateSumOfDigits(number);
+    } else if (mode === 'sumOfIntegerDigits') {
+        return calculateSumOfIntegerDigits(number);
+    }
 }
