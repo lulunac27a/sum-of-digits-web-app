@@ -11,7 +11,7 @@ function calculateSumOfDigits() {
     const sum = calculateSum(number);
     result.textContent = `Sum of digits: ${sum}`;
 }
-function calculateSumOfDigits(number) {
+function calculateSumOfAllDigits(number) {
     const numberString = number.toString().split('e')[0];
     let sum = 0;
     for (let i = 0; i < numberString.length; i++) {
@@ -33,7 +33,7 @@ function calculateSumOfIntegerDigits(number) {
 
 function calculateSum(number) {
     if (mode === 'sumOfDigits') {
-        return calculateSumOfDigits(number);
+        return calculateSumOfAllDigits(number);
     } else if (mode === 'sumOfIntegerDigits') {
         return calculateSumOfIntegerDigits(number);
     }
