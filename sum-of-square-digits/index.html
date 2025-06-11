@@ -1,17 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>Sum of Digits Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Sum of Digits Calculator</h1>
-    <input type="number" id="numberInput">
-    <select id="option"><!--mode to calculate sum-->
-        <option value="sumOfDigits" selected>Sum of Digits</option>
-        <option value="sumOfIntegerDigits">Sum of Integer Digits</option>
+    <input type="number" id="numberInput" />
+    <select id="option">
+      <!--mode to calculate sum-->
+      <option value="sumOfDigits" selected>Sum of Digits</option>
+      <option value="sumOfIntegerDigits">Sum of Integer Digits</option>
     </select>
     <button onclick="calculateSumOfDigits()">Calculate</button>
-    Sum of Digits: <p id="result"><!--result display--></p>
+    Sum of Digits:
+    <p id="result"><!--result display--></p>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
