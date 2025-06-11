@@ -19,12 +19,13 @@ function calculateSumOfAllDigits(number) {
     .split("e")[0]
     .replaceAll(".", "")
     .replaceAll("-", ""); //remove non digit characters to avoid errors
-  let sum = 0;
+  let sum = 0; //initialize sum
   for (let i = 0; i < numberString.length; i++) {
-    const digit = parseInt(numberString[i], 10);
-    sum += digit * digit; //square each digit
+    //repeat for each digit
+    const digit = parseInt(numberString[i], 10); //convert string to integer
+    sum += digit; //square each digit then add digit to sum
   }
-  return sum;
+  return sum; //return sum of all digits
 }
 
 function calculateSumOfIntegerDigits(number) {
@@ -33,12 +34,13 @@ function calculateSumOfIntegerDigits(number) {
     .toString()
     .replaceAll(".", "")
     .replaceAll("-", ""); //remove non digit characters to avoid errors
-  let sum = 0;
+  let sum = 0; //initialize sum
   for (let i = 0; i < integerString.length; i++) {
-    const digit = parseInt(integerString[i], 10);
-    sum += digit * digit; //square each digit
+    //repeat for each digit
+    const digit = parseInt(integerString[i], 10); //convert string to integer
+    sum += digit; //square each digit then add digit to sum
   }
-  return sum;
+  return sum; //return sum of integer digits
 }
 
 function calculateSum(number) {
