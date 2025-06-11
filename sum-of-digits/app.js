@@ -14,8 +14,8 @@ function calculateSumOfAllDigits(number) {
   const numberString = number
     .toString()
     .split("e")[0]
-    .replace(".", "")
-    .replace("-", "");
+    .replaceAll(".", "")
+    .replaceAll("-", "");
   let sum = 0;
   for (let i = 0; i < numberString.length; i++) {
     const digit = parseInt(numberString[i], 10);
@@ -27,8 +27,8 @@ function calculateSumOfAllDigits(number) {
 function calculateSumOfIntegerDigits(number) {
   const integerString = parseInt(number, 10)
     .toString()
-    .replace(".", "")
-    .replace("-", "");
+    .replaceAll(".", "")
+    .replaceAll("-", "");
   let sum = 0;
   for (let i = 0; i < integerString.length; i++) {
     const digit = parseInt(integerString[i], 10);
