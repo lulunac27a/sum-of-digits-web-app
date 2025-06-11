@@ -11,7 +11,7 @@ function calculateSumOfDigits() {
         //if entered number is not a number
         result.textContent = "Please enter a valid number.";
     }
-    const sum = calculateSum(number); //calculate sum of entered number
+    const sum = calculateSum(number, power); //calculate sum of entered number
     result.textContent = sum; //display result
 }
 function calculateSumOfAllDigits(number, power) {
@@ -45,13 +45,13 @@ function calculateSumOfIntegerDigits(number, power) {
     return sum; //return sum of integer digits
 }
 
-function calculateSum(number) {
+function calculateSum(number, power) {
     //calculate sum function
     if (mode === "sumOfDigits") {
         //if mode is sum of digits
-        return calculateSumOfAllDigits(number); //return sum of all digits
+        return calculateSumOfAllDigits(number, power); //return sum of all digits
     } else if (mode === "sumOfIntegerDigits") {
         //else if mode is sum of integer digits
-        return calculateSumOfIntegerDigits(number); //return sum of integer digits
+        return calculateSumOfIntegerDigits(number, power); //return sum of integer digits
     }
 }
