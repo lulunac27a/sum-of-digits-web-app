@@ -25,7 +25,7 @@ function calculateSumOfAllDigits(number, power) {
     for (let i = 0; i < numberString.length; i++) {
         //repeat for each digit
         const digit = parseInt(numberString[i], 10); //convert string to integer
-        sum += digit ** power; //get power of digit then add digit to sum
+        sum += digit ** power; //get power root of digit then add digit to sum
     }
     return sum; //return sum of all digits
 }
@@ -40,7 +40,7 @@ function calculateSumOfIntegerDigits(number, power) {
     for (let i = 0; i < integerString.length; i++) {
         //repeat for each digit
         const digit = parseInt(integerString[i], 10); //convert string to integer
-        sum += digit ** power; //get power of digit then add digit to sum
+        sum += digit ** power; //get power root of digit then add digit to sum
     }
     return sum; //return sum of integer digits
 }
